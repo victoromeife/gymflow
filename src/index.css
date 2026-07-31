@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", ui-sans-serif, system-ui, sans-serif;
+
+  --color-lime-glow: #a3e635;
+  --color-surface: #18181b;
+  --color-surface-elevated: #27272a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #09090b;
+  color: #fafafa;
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #09090b;
+}
+::-webkit-scrollbar-thumb {
+  background: #3f3f46;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #52525b;
+}
+
+/* Gradient text utility */
+.text-gradient {
+  background: linear-gradient(135deg, #a3e635 0%, #4ade80 50%, #22d3ee 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Glow effect for CTAs */
+.glow-lime {
+  box-shadow: 0 0 20px rgba(163, 230, 53, 0.35), 0 0 40px rgba(163, 230, 53, 0.15);
+}
+
+.glow-lime:hover {
+  box-shadow: 0 0 30px rgba(163, 230, 53, 0.5), 0 0 60px rgba(163, 230, 53, 0.25);
+}
